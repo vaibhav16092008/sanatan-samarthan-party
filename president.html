@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+राष्ट्रीय अध्यक्ष | सनातन समर्थक पार्टी
+</title>
+
+<!-- GOOGLE FONT -->
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;700;800;900&display=swap"
+rel="stylesheet">
+
+<!-- FONT AWESOME -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:
+'Noto Sans Devanagari',
+sans-serif;
+
+background:#fff7f0;
+
+overflow-x:hidden;
+
+color:#222;
+
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+z-index:1000;
+
+background:
+linear-gradient(
+to right,
+#7a0000,
+#ff6600
+);
+
+box-shadow:
+0 5px 20px rgba(0,0,0,0.25);
+
+}
+
+.navbar{
+
+width:90%;
+
+margin:auto;
+
+display:flex;
+
+justify-content:
+space-between;
+
+align-items:center;
+
+padding:18px 0;
+
+}
+
+.logo{
+
+font-size:38px;
+
+font-weight:900;
+
+color:white;
+
+}
+
+.logo span{
+
+color:#ffd700;
+
+}
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:35px;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+
+color:white;
+
+font-size:18px;
+
+font-weight:700;
+
+transition:0.3s;
+
+position:relative;
+
+}
+
+nav ul li a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-7px;
+
+width:0;
+
+height:3px;
+
+background:#ffd700;
+
+transition:0.3s;
+
+}
+
+nav ul li a:hover::after{
+
+width:100%;
+
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+
+position:relative;
+
+min-height:100vh;
+
+padding:
+150px 8% 100px;
+
+display:flex;
+
+align-items:center;
+
+overflow:hidden;
+
+background:
+linear-gradient(
+135deg,
+rgba(35,0,0,0.92),
+rgba(90,0,0,0.88),
+rgba(180,50,0,0.78)
+),
+
+url('images/banner-poster.png');
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+/* DARK GLASS */
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+rgba(0,0,0,0.45);
+
+backdrop-filter:
+blur(7px);
+
+}
+
+/* GOLD GLOW */
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+width:550px;
+
+height:550px;
+
+background:
+rgba(255,170,0,0.12);
+
+border-radius:50%;
+
+top:-120px;
+
+right:-120px;
+
+filter:blur(50px);
+
+}
+
+/* HERO CONTAINER */
+
+.hero-container{
+
+position:relative;
+
+z-index:2;
+
+max-width:1400px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+gap:90px;
+
+align-items:center;
+
+}
+
+/* =========================
+   IMAGE SECTION
+========================= */
+
+.president-image{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+}
+
+.image-frame{
+
+position:relative;
+
+padding:12px;
+
+border-radius:35px;
+
+background:
+linear-gradient(
+135deg,
+#ffd700,
+#ff9900
+);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.45);
+
+}
+
+.image-frame::before{
+
+content:"";
+
+position:absolute;
+
+top:-15px;
+
+left:-15px;
+
+right:-15px;
+
+bottom:-15px;
+
+border:
+2px solid rgba(255,215,0,0.25);
+
+border-radius:45px;
+
+}
+
+.image-frame img{
+
+width:100%;
+
+max-width:420px;
+
+display:block;
+
+border-radius:28px;
+
+background:white;
+
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.hero-content{
+
+color:white;
+
+}
+
+.hero-badge{
+
+display:inline-block;
+
+padding:14px 30px;
+
+background:
+rgba(255,255,255,0.12);
+
+border:
+1px solid rgba(255,255,255,0.18);
+
+backdrop-filter:blur(10px);
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:700;
+
+color:#ffd700;
+
+margin-bottom:28px;
+
+}
+
+.hero-content h1{
+
+font-size:85px;
+
+font-weight:900;
+
+line-height:1.05;
+
+margin-bottom:15px;
+
+text-shadow:
+0 5px 20px rgba(0,0,0,0.45);
+
+}
+
+.hero-content h1 span{
+
+color:#ffd700;
+
+}
+
+.hero-content h2{
+
+font-size:42px;
+
+font-weight:800;
+
+color:#ffe082;
+
+margin-bottom:28px;
+
+}
+
+.hero-content p{
+
+font-size:24px;
+
+line-height:2;
+
+color:#fff5f5;
+
+max-width:700px;
+
+margin-bottom:40px;
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.hero-btn{
+
+padding:18px 38px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-size:20px;
+
+font-weight:700;
+
+transition:0.3s;
+
+}
+
+.primary-btn{
+
+background:
+linear-gradient(
+to right,
+#ffd700,
+#ff9900
+);
+
+color:#7a0000;
+
+box-shadow:
+0 10px 30px rgba(255,215,0,0.35);
+
+}
+
+.primary-btn:hover{
+
+transform:
+translateY(-5px);
+
+}
+
+.secondary-btn{
+
+background:
+rgba(255,255,255,0.12);
+
+border:
+2px solid rgba(255,255,255,0.18);
+
+color:white;
+
+backdrop-filter:blur(10px);
+
+}
+
+.secondary-btn:hover{
+
+background:white;
+
+color:#7a0000;
+
+}
+
+/* =========================
+   MESSAGE SECTION
+========================= */
+
+.message-section{
+
+padding:110px 8%;
+
+background:
+linear-gradient(
+to bottom,
+#fff8f0,
+#fff1e0
+);
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.section-title h2{
+
+font-size:58px;
+
+font-weight:900;
+
+color:#7a0000;
+
+margin-bottom:15px;
+
+}
+
+.section-title p{
+
+font-size:22px;
+
+color:#666;
+
+}
+
+/* MESSAGE BOX */
+
+.message-box{
+
+position:relative;
+
+max-width:1200px;
+
+margin:auto;
+
+padding:70px 60px;
+
+background:white;
+
+border-radius:40px;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.08);
+
+overflow:hidden;
+
+border-top:
+8px solid #ff6600;
+
+}
+
+.message-box::before{
+
+content:"❝";
+
+position:absolute;
+
+top:-20px;
+
+left:20px;
+
+font-size:160px;
+
+font-weight:900;
+
+color:
+rgba(255,102,0,0.12);
+
+}
+
+.message-heading{
+
+font-size:44px;
+
+font-weight:900;
+
+color:#7a0000;
+
+text-align:center;
+
+margin-bottom:15px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.message-line{
+
+width:120px;
+
+height:5px;
+
+background:
+linear-gradient(
+to right,
+#ff6600,
+#ffd700
+);
+
+margin:
+0 auto 40px;
+
+border-radius:10px;
+
+}
+
+.main-message{
+
+font-size:32px;
+
+line-height:2;
+
+font-weight:800;
+
+color:#7a0000;
+
+text-align:center;
+
+margin-bottom:35px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.message-box p{
+
+font-size:23px;
+
+line-height:2.2;
+
+color:#333;
+
+margin-bottom:28px;
+
+text-align:justify;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.message-footer{
+
+margin-top:40px;
+
+padding:22px;
+
+border-radius:20px;
+
+background:
+linear-gradient(
+to right,
+#7a0000,
+#ff6600
+);
+
+color:white;
+
+text-align:center;
+
+font-size:24px;
+
+font-weight:700;
+
+}
+
+/* =========================
+   VISION SECTION
+========================= */
+
+.vision-section{
+
+padding:100px 8%;
+
+background:white;
+
+}
+
+.vision-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:35px;
+
+}
+
+.vision-card{
+
+background:
+linear-gradient(
+135deg,
+#fff7ef,
+#fff1e0
+);
+
+padding:45px 30px;
+
+border-radius:30px;
+
+text-align:center;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.08);
+
+transition:0.4s;
+
+border-top:
+6px solid #ff6600;
+
+}
+
+.vision-card:hover{
+
+transform:
+translateY(-10px);
+
+}
+
+.vision-card i{
+
+font-size:60px;
+
+color:#ff6600;
+
+margin-bottom:25px;
+
+}
+
+.vision-card h3{
+
+font-size:30px;
+
+color:#7a0000;
+
+margin-bottom:18px;
+
+}
+
+.vision-card p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#555;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+background:#111;
+
+padding:50px 20px;
+
+text-align:center;
+
+color:white;
+
+}
+
+footer h3{
+
+font-size:36px;
+
+margin-bottom:15px;
+
+color:#ffd700;
+
+}
+
+footer p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#ddd;
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:1000px){
+
+.hero-container{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+gap:50px;
+
+}
+
+.hero-content{
+
+order:2;
+
+}
+
+.president-image{
+
+order:1;
+
+}
+
+.hero-content h1{
+
+font-size:56px;
+
+}
+
+.hero-content h2{
+
+font-size:32px;
+
+}
+
+.hero-content p{
+
+font-size:19px;
+
+margin:auto auto 35px;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.logo{
+
+font-size:28px;
+
+}
+
+.message-box{
+
+padding:45px 25px;
+
+}
+
+.message-box p{
+
+font-size:19px;
+
+line-height:2;
+
+}
+
+.main-message{
+
+font-size:24px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero{
+
+padding:
+120px 20px 80px;
+
+}
+
+.hero-content h1{
+
+font-size:42px;
+
+}
+
+.hero-content h2{
+
+font-size:24px;
+
+}
+
+.hero-content p{
+
+font-size:17px;
+
+}
+
+.hero-btn{
+
+width:100%;
+
+text-align:center;
+
+}
+
+.image-frame img{
+
+max-width:100%;
+
+}
+
+.section-title h2{
+
+font-size:34px;
+
+}
+
+.message-heading{
+
+font-size:32px;
+
+}
+
+.message-footer{
+
+font-size:18px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+
+सनातन <span>समर्थक</span> पार्टी
+
+</div>
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">
+मुख्य पृष्ठ
+</a>
+</li>
+
+<li>
+<a href="sankalp.html">
+108 संकल्प
+</a>
+</li>
+
+<li>
+<a href="president.html">
+राष्ट्रीय अध्यक्ष
+</a>
+</li>
+
+<li>
+<a href="contact.html">
+संपर्क
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="hero-container">
+
+<!-- IMAGE -->
+
+<div class="president-image">
+
+<div class="image-frame">
+
+<img
+src="images/president.jpeg"
+alt="डॉ. विजय प्रताप आर्य">
+
+</div>
+
+</div>
+
+<!-- CONTENT -->
+
+<div class="hero-content">
+
+<div class="hero-badge">
+
+🚩 राष्ट्र निर्माण का संकल्प
+
+</div>
+
+<h1>
+
+डॉ. विजय प्रताप <span>आर्य</span>
+
+</h1>
+
+<h2>
+
+राष्ट्रीय अध्यक्ष
+
+</h2>
+
+<p>
+
+सनातन संस्कृति,
+भारतीय स्वाभिमान,
+राष्ट्र सुरक्षा,
+ग्राम विकास एवं
+आत्मनिर्भर भारत के निर्माण हेतु
+समर्पित नेतृत्व।
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="contact.html"
+class="hero-btn primary-btn">
+
+संपर्क करें
+
+</a>
+
+<a href="sankalp.html"
+class="hero-btn secondary-btn">
+
+108 संकल्प
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     MESSAGE
+========================= -->
+
+<section class="message-section">
+
+<div class="section-title">
+
+<h2>
+
+राष्ट्रीय अध्यक्ष का संदेश
+
+</h2>
+
+<p>
+
+राष्ट्र, संस्कृति एवं समाज सेवा के प्रति समर्पित विचार
+
+</p>
+
+</div>
+
+<div class="message-box">
+
+<h3 class="message-heading">
+
+हमारा संदेश
+
+</h3>
+
+<div class="message-line"></div>
+
+<div class="main-message">
+
+“धर्म की रक्षा,
+संस्कृति का उत्थान,
+राष्ट्र का सम्मान
+और जनता का कल्याण”
+
+</div>
+
+<p>
+
+इसी मूल भावना के साथ
+सनातन समर्थक पार्टी
+राष्ट्र निर्माण के पथ पर अग्रसर है।
+
+</p>
+
+<p>
+
+हमारा उद्देश्य केवल राजनीतिक परिवर्तन नहीं,
+बल्कि भारत की प्राचीन सनातन परंपरा,
+भारतीय संस्कृति,
+सामाजिक समरसता,
+राष्ट्रीय सुरक्षा एवं
+आत्मनिर्भर विकास को
+नई ऊर्जा प्रदान करना है।
+
+</p>
+
+<p>
+
+हम एक ऐसे भारत का निर्माण करना चाहते हैं
+जहाँ युवाओं को रोजगार,
+महिलाओं को सुरक्षा,
+किसानों को सम्मान,
+गरीबों को न्याय,
+और प्रत्येक नागरिक को
+गरिमा के साथ जीवन जीने का अवसर प्राप्त हो।
+
+</p>
+
+<p>
+
+सनातन समर्थक पार्टी का संकल्प है कि
+भारत पुनः विश्वगुरु बने,
+भारतीय संस्कृति का गौरव विश्वभर में स्थापित हो,
+और आने वाली पीढ़ियों को
+एक सुरक्षित,
+समृद्ध एवं स्वाभिमानी राष्ट्र प्राप्त हो।
+
+</p>
+
+<div class="message-footer">
+
+----- राष्ट्र प्रथम • संस्कृति सर्वोपरि • जनता सर्वोपरी ------
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     VISION
+========================= -->
+
+<section class="vision-section">
+
+<div class="section-title">
+
+<h2>
+
+हमारा विज़न
+
+</h2>
+
+<p>
+
+राष्ट्र निर्माण हेतु मुख्य प्राथमिकताएं
+
+</p>
+
+</div>
+
+<div class="vision-grid">
+
+<div class="vision-card">
+
+<i class="fa-solid fa-om"></i>
+
+<h3>
+
+संस्कृति संरक्षण
+
+</h3>
+
+<p>
+
+भारतीय संस्कृति,
+परंपराओं एवं
+धार्मिक मूल्यों का संरक्षण।
+
+</p>
+
+</div>
+
+<div class="vision-card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>
+
+राष्ट्रीय सुरक्षा
+
+</h3>
+
+<p>
+
+मजबूत भारत एवं
+सुरक्षित सीमाओं का निर्माण।
+
+</p>
+
+</div>
+
+<div class="vision-card">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h3>
+
+शिक्षा उत्थान
+
+</h3>
+
+<p>
+
+भारतीय ज्ञान परंपरा आधारित
+गुणवत्तापूर्ण शिक्षा व्यवस्था।
+
+</p>
+
+</div>
+
+<div class="vision-card">
+
+<i class="fa-solid fa-person-dress"></i>
+
+<h3>
+
+महिला सुरक्षा
+
+</h3>
+
+<p>
+
+महिलाओं की सुरक्षा,
+सम्मान एवं सशक्तिकरण।
+
+</p>
+
+</div>
+
+<div class="vision-card">
+
+<i class="fa-solid fa-landmark"></i>
+
+<h3>
+
+सनातन संस्कृति
+
+</h3>
+
+<p>
+
+भारतीय संस्कृति एवं
+गौरवशाली परंपराओं का संरक्षण।
+
+</p>
+
+</div>
+
+<div class="vision-card">
+
+<i class="fa-solid fa-tractor"></i>
+
+<h3>
+
+ग्राम विकास
+
+</h3>
+
+<p>
+
+आत्मनिर्भर गांव,
+किसान कल्याण एवं
+डिजिटल सुविधाओं का विस्तार।
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<h3>
+
+सनातन समर्थक पार्टी
+
+</h3>
+
+<p>
+
+धर्म • संस्कृति • राष्ट्र • स्वाभिमान || 
+
+© 2026 All Rights Reserved
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
