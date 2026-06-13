@@ -1,697 +1,760 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>सनातन समर्थक पार्टी</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-/* =========================
-   GLOBAL
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Noto Sans Devanagari', sans-serif;
-    background:#fff8f0;
-    color:#222;
-    overflow-x:hidden;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-header{
-    width:100%;
-    background:linear-gradient(to right,#7a0000,#ff6600);
-    position:fixed;
-    top:0;
-    z-index:1000;
-    box-shadow:0 4px 20px rgba(0,0,0,0.3);
-}
-
-.navbar{
-    width:90%;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 0;
-}
-
-.logo{
-    color:white;
-    font-size:30px;
-    font-weight:800;
-}
-
-.logo span{
-    color:#ffd700;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:25px;
-}
-
-nav ul li a{
-    text-decoration:none;
-    color:white;
-    font-weight:600;
-    transition:0.3s;
-}
-
-nav ul li a:hover{
-    color:#ffd700;
-}
-
-/* =========================
-   HERO SECTION
-========================= */
-
-.hero{
-    height:100vh;
-    background:
-    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
-    url('images/banner.jpg');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-    padding:20px;
-}
-
-.hero-content h1{
-    font-size:75px;
-    margin-bottom:20px;
-    color:#ffd700;
-    text-shadow:0 0 20px rgba(255,215,0,0.5);
-}
-
-.hero-content h2{
-    font-size:40px;
-    margin-bottom:20px;
-}
-
-.hero-content p{
-    max-width:900px;
-    margin:auto;
-    line-height:1.8;
-    font-size:20px;
-}
-
-.hero-btns{
-    margin-top:40px;
-}
-
-.btn{
-    display:inline-block;
-    padding:15px 35px;
-    background:#ff6600;
-    color:white;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:700;
-    margin:10px;
-    transition:0.4s;
-    box-shadow:0 0 15px rgba(255,102,0,0.4);
-}
-
-.btn:hover{
-    background:#ffd700;
-    color:black;
-    transform:translateY(-5px);
-}
-
-/* =========================
-   ABOUT
-========================= */
-
-.section{
-    padding:100px 10%;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.section-title h2{
-    font-size:45px;
-    color:#7a0000;
-    margin-bottom:15px;
-}
-
-.section-title p{
-    color:#555;
-    font-size:18px;
-}
-
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
-}
-
-.about img{
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.3);
-}
-
-.about-content h3{
-    font-size:38px;
-    color:#ff6600;
-    margin-bottom:20px;
-}
-
-.about-content p{
-    line-height:1.9;
-    margin-bottom:20px;
-    font-size:18px;
-}
-
-/* =========================
-   CARDS
-========================= */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    text-align:center;
-    transition:0.4s;
-    box-shadow:0 10px 30px rgba(0,0,0,0.1);
-    border-top:5px solid #ff6600;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-.card h3{
-    margin:20px 0;
-    color:#7a0000;
-    font-size:28px;
-}
-
-.card p{
-    line-height:1.7;
-}
-
-/* =========================
-   SANKALP SECTION
-========================= */
-
-.sankalp{
-    background:#fff2e6;
-}
-
-.sankalp-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-}
-
-.sankalp-item{
-    background:white;
-    padding:25px;
-    border-left:6px solid #ff6600;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
-
-.sankalp-item h4{
-    color:#7a0000;
-    margin-bottom:15px;
-    font-size:24px;
-}
-
-.sankalp-item p{
-    line-height:1.7;
-}
-
-/* =========================
-   PRESIDENT
-========================= */
-
-.president{
-    background:linear-gradient(to right,#7a0000,#ff6600);
-    color:white;
-    border-radius:30px;
-    padding:60px;
-    display:grid;
-    grid-template-columns:300px 1fr;
-    gap:50px;
-    align-items:center;
-}
-
-.president img{
-    width:100%;
-    border-radius:20px;
-    border:6px solid #ffd700;
-}
-
-.president h2{
-    font-size:50px;
-    margin-bottom:20px;
-}
-
-.president p{
-    line-height:1.9;
-    font-size:18px;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-    background:#1f1f1f;
-    color:white;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:40px;
-}
-
-.contact-box h3{
-    color:#ffd700;
-    margin-bottom:20px;
-    font-size:30px;
-}
-
-.contact-box p{
-    line-height:2;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:black;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:900px){
-
-.hero-content h1{
-    font-size:50px;
-}
-
-.hero-content h2{
-    font-size:30px;
-}
-
-.about{
-    grid-template-columns:1fr;
-}
-
-.president{
-    grid-template-columns:1fr;
-    text-align:center;
-}
-
-nav ul{
-    display:none;
-}
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<!-- =========================
-     HEADER
-========================= -->
-
-<header>
-
-<div class="navbar">
-
-<div class="logo">
-सनातन <span>समर्थक</span> पार्टी
-</div>
-
-<nav>
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="sankalp.html">108 संकल्प</a></li>
-<li><a href="president.html">राष्ट्रीय अध्यक्ष</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-
-</div>
-
-</header>
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero">
-
-<div class="hero-content">
-
-<h1>सनातन समर्थक पार्टी</h1>
-
-<h2>धर्म • संस्कृति • राष्ट्र • स्वाभिमान</h2>
-
-<p>
-भारत की सनातन संस्कृति, राष्ट्रीय एकता, ग्राम विकास,
-युवा शक्ति, गौ संरक्षण और आत्मनिर्भर भारत के निर्माण हेतु समर्पित।
-</p>
-
-<div class="hero-btns">
-
-<a href="sankalp.html" class="btn">108 संकल्प</a>
-
-<a href="contact.html" class="btn">संपर्क करें</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section class="section" id="about">
-
-<div class="section-title">
-<h2>पार्टी परिचय</h2>
-<p>राष्ट्र निर्माण के लिए समर्पित एक सांस्कृतिक एवं राष्ट्रवादी संगठन</p>
-</div>
-
-<div class="about">
-
-<img src="images/party-banner.jpeg">
-
-<div class="about-content">
-
-<h3>सनातन से राष्ट्र निर्माण</h3>
-
-<p>
-सनातन समर्थक पार्टी भारतीय संस्कृति, आध्यात्मिकता,
-राष्ट्रवाद और सामाजिक न्याय के मूल सिद्धांतों पर आधारित संगठन है।
-</p>
-
-<p>
-हमारा उद्देश्य भारत को विश्वगुरु बनाना, युवाओं को सशक्त करना,
-गांवों का विकास करना तथा भारतीय सभ्यता एवं परंपराओं की रक्षा करना है।
-</p>
-
-<p>
-पार्टी राष्ट्रहित, सुरक्षा, संस्कृति, शिक्षा, रोजगार,
-कृषि और सामाजिक विकास को सर्वोच्च प्राथमिकता देती है।
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     FEATURES
-========================= -->
-
-<section class="section">
-
-<div class="section-title">
-<h2>हमारी प्राथमिकताएं</h2>
-<p>108 संकल्पों में शामिल मुख्य विषय</p>
-</div>
-
-<div class="cards">
-
-<div class="card">
-<h3>गौ संरक्षण</h3>
-<p>
-गोमाता संरक्षण, गौशाला निर्माण और भारतीय कृषि संस्कृति को बढ़ावा।
-</p>
-</div>
-
-<div class="card">
-<h3>युवा शक्ति</h3>
-<p>
-रोजगार, कौशल विकास, सैन्य प्रशिक्षण एवं नेतृत्व निर्माण।
-</p>
-</div>
-
-<div class="card">
-<h3>ग्राम विकास</h3>
-<p>
-डिजिटल गांव, स्वास्थ्य केंद्र, स्वच्छता एवं आत्मनिर्भर पंचायतें।
-</p>
-</div>
-
-<div class="card">
-<h3>संस्कृति संरक्षण</h3>
-<p>
-भारतीय संस्कृति, संस्कृत भाषा और धार्मिक परंपराओं का संरक्षण।
-</p>
-</div>
-
-<div class="card">
-<h3>राष्ट्रीय सुरक्षा</h3>
-<p>
-सीमा सुरक्षा मजबूत करना, आतंकवाद के विरुद्ध कठोर नीति एवं सेना का आधुनिकीकरण।
-</p>
-</div>
-
-<div class="card">
-<h3>शिक्षा एवं आयुर्वेद</h3>
-<p>
-निःशुल्क शिक्षा, गुरुकुल व्यवस्था, आयुर्वेद विश्वविद्यालय एवं भारतीय ज्ञान परंपरा को बढ़ावा।
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     SANKALP
-========================= -->
-
-<section class="section sankalp" id="sankalp">
-
-<div class="section-title">
-<h2>108 संकल्प</h2>
-<p>राष्ट्र एवं समाज के लिए हमारी प्रतिबद्धताएं</p>
-</div>
-
-<div class="sankalp-grid">
-
-<div class="sankalp-item">
-<h4>हिन्दू राष्ट्र</h4>
-<p>
-हिन्दू राष्ट्र की घोषणा एवं सनातन बोर्ड का गठन।
-</p>
-</div>
-
-<div class="sankalp-item">
-<h4>समान नागरिक संहिता</h4>
-<p>
-देशभर में समान नागरिक संहिता लागू करना।
-</p>
-</div>
-
-<div class="sankalp-item">
-<h4>ग्राम विकास</h4>
-<p>
-गांव स्तर पर आधुनिक विद्यालय, स्वास्थ्य केंद्र एवं डिजिटल लाइब्रेरी।
-</p>
-</div>
-
-<div class="sankalp-item">
-<h4>किसान कल्याण</h4>
-<p>
-MSP की कानूनी गारंटी एवं कम ब्याज कृषि ऋण।
-</p>
-</div>
-
-<div class="sankalp-item">
-<h4>महिला सुरक्षा</h4>
-<p>
-महिलाओं एवं बालिकाओं की सुरक्षा हेतु कठोर कानून।
-</p>
-</div>
-
-<div class="sankalp-item">
-<h4>भारतीय संस्कृति</h4>
-<p>
-योग, ध्यान, संस्कृत एवं भारतीय परिधान को प्रोत्साहन।
-</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     PRESIDENT
-========================= -->
-
-<section class="section" id="president">
-
-<div class="president">
-
-<img src="images/vijay-pratap-arya.jpeg">
-
-<div>
-
-<h2>डॉ. विजय प्रताप आर्य</h2>
-
-<h3>राष्ट्रीय अध्यक्ष</h3>
-
-<br>
-
-<p>
-“हमारा लक्ष्य केवल राजनीति नहीं,
-बल्कि भारत की सनातन संस्कृति,
-राष्ट्रीय गौरव और सामाजिक एकता का पुनर्जागरण है।”
-</p>
-
-<br>
-
-<p>
-सनातन समर्थक पार्टी भारत को विश्वगुरु बनाने,
-युवाओं को सशक्त करने,
-गांवों को आत्मनिर्भर बनाने और
-भारतीय मूल्यों को पुनः स्थापित करने हेतु कार्यरत है।
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section class="section contact" id="contact">
-
-<div class="section-title">
-<h2 style="color:white;">संपर्क करें</h2>
-<p style="color:#ddd;">
-राष्ट्रीय कार्यालय एवं संपर्क जानकारी
-</p>
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-box">
-
-<h3>राष्ट्रीय कार्यालय</h3>
-
-<p>
-अयोध्यापुरम कॉलोनी, आराध्य होम स्टे,<br>
-
-दशरथ कुंड वॉर्ड,<br>
-
-पंचकोसी परिक्रमा मार्ग,<br>
-
-निकट चूड़ामणि चौराहा,<br>
-
-अयोध्या धाम, अयोध्या<br>
-
-पिन कोड - 224001
-</p>
-
-</div>
-
-<div class="contact-box">
-
-<h3>संपर्क</h3>
-
-<p>
-
-📞 7651811485<br>
-
-📞 9918112402<br><br>
-
-✉ info@sanatansamarthakparty.in
-
-</p>
-
-</div>
-
-<div class="contact-box">
-
-<h3>हमारा संदेश</h3>
-
-<p>
-“धर्म की रक्षा, संस्कृति का उत्थान,
-राष्ट्र का सम्मान और जनता का कल्याण”
-हम एक ऐसे भारत का निर्माण करना चाहते हैं जहाँ युवाओं को रोजगार, 
-महिलाओं को सुरक्षा, किसानों को सम्मान, 
-गरीबों को न्याय, और प्रत्येक नागरिक को गरिमा के साथ जीवन जीने का अवसर प्राप्त हो।
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-© 2026 सनातन समर्थक पार्टी | All Rights Reserved
-
-</footer>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>सनातन समर्थक पार्टी | धर्म • संस्कृति • राष्ट्र • स्वाभिमान</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome 6 (free icons) for visual enhancement -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Noto Sans Devanagari", sans-serif;
+        background: #fef9ef;
+        color: #1e1e2a;
+        overflow-x: hidden;
+        line-height: 1.5;
+      }
+
+      /* custom scroll */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1e6d9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ff6600;
+        border-radius: 10px;
+      }
+
+      /* modern header */
+      header {
+        width: 100%;
+        background: linear-gradient(135deg, #6b1a1a 0%, #c13b00 100%);
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+      }
+
+      .navbar {
+        width: 90%;
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+      }
+
+      .logo {
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .logo span {
+        color: #ffdd88;
+        text-shadow: 0 0 2px #ffaa33;
+      }
+      .logo i {
+        font-size: 2rem;
+        color: #ffdd88;
+      }
+
+      .hamburger {
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: white;
+        transition: 0.2s;
+      }
+      .hamburger:hover {
+        color: #ffdd88;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        font-size: 1.05rem;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 0;
+      }
+      nav ul li a i {
+        font-size: 1rem;
+      }
+      nav ul li a:hover {
+        color: #ffdd88;
+        transform: translateY(-2px);
+      }
+
+      /* mobile nav */
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+        }
+        nav {
+          position: absolute;
+          top: 75px;
+          left: 0;
+          width: 100%;
+          background: linear-gradient(135deg, #7a2222, #b34410);
+          backdrop-filter: blur(12px);
+          z-index: 999;
+          transform: scaleY(0);
+          transform-origin: top;
+          transition: transform 0.3s ease;
+          border-radius: 0 0 28px 28px;
+          box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.3);
+        }
+        nav.active {
+          transform: scaleY(1);
+        }
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+          padding: 1.5rem 0;
+          gap: 1.3rem;
+        }
+        nav ul li a {
+          font-size: 1.2rem;
+        }
+      }
+
+      /* ========= HERO SECTION ========= */
+      .hero {
+        min-height: 100vh;
+        background:
+          linear-gradient(125deg, rgba(0, 0, 0, 0.65), rgba(100, 30, 0, 0.75)),
+          url("images/banner.jpg");
+        background-size: cover;
+        background-position: center 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 6rem 1.5rem;
+      }
+      .hero-content {
+        max-width: 1000px;
+        animation: fadeUp 1s ease-out;
+      }
+      .hero-content h1 {
+        font-size: clamp(2.5rem, 8vw, 5rem);
+        font-weight: 800;
+        color: #ffdd99;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        margin-bottom: 1rem;
+      }
+      .hero-content h2 {
+        font-size: clamp(1.5rem, 5vw, 2.6rem);
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #fff1d0;
+      }
+      .hero-content p {
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin: 1.5rem auto;
+        line-height: 1.7;
+        color: #fef3e2;
+      }
+      .hero-btns {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 32px;
+        background: #ff6600;
+        color: white;
+        text-decoration: none;
+        border-radius: 60px;
+        font-weight: 700;
+        transition: all 0.3s;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        border: none;
+        font-size: 1rem;
+      }
+      .btn i {
+        font-size: 1.2rem;
+      }
+      .btn:hover {
+        background: #ffaa33;
+        color: #3b1c00;
+        transform: translateY(-4px);
+        box-shadow: 0 15px 25px -8px black;
+      }
+      @keyframes fadeUp {
+        0% {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* section utilities */
+      .section {
+        padding: 5rem 6%;
+      }
+      @media (max-width: 900px) {
+        .section {
+          padding: 3rem 5%;
+        }
+      }
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      .section-title h2 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        color: #7a0000;
+        margin-bottom: 0.75rem;
+        position: relative;
+        display: inline-block;
+      }
+      .section-title h2:after {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 4px;
+        background: #ff6600;
+        border-radius: 4px;
+      }
+      .section-title p {
+        color: #4a4a55;
+        font-size: 1.1rem;
+      }
+
+      /* about grid */
+      .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+      .about img {
+        width: 100%;
+        border-radius: 32px;
+        box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.25);
+        transition: 0.4s;
+        border: 3px solid #ffcc88;
+      }
+      .about-content h3 {
+        font-size: 2rem;
+        color: #ff6600;
+        margin-bottom: 1.2rem;
+      }
+      .about-content p {
+        line-height: 1.8;
+        margin-bottom: 1.2rem;
+        font-size: 1rem;
+        color: #2c2c2e;
+      }
+      @media (max-width: 850px) {
+        .about {
+          grid-template-columns: 1fr;
+        }
+        .about img {
+          max-width: 90%;
+          margin: 0 auto;
+          display: block;
+        }
+      }
+
+      /* card grid */
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+      }
+      .card {
+        background: white;
+        padding: 2rem 1.5rem;
+        border-radius: 28px;
+        text-align: center;
+        transition: all 0.35s;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+        border-bottom: 5px solid #ff6600;
+      }
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 22px 35px -12px rgba(255, 102, 0, 0.2);
+        border-bottom-color: #ffaa33;
+      }
+      .card i {
+        font-size: 3rem;
+        color: #ff6600;
+        background: #fff0e0;
+        padding: 12px;
+        border-radius: 60px;
+      }
+      .card h3 {
+        margin: 1.2rem 0 0.8rem;
+        color: #7a0000;
+        font-size: 1.7rem;
+      }
+      /* sankalp section */
+      .sankalp {
+        background: linear-gradient(112deg, #fff3e8 0%, #ffede1 100%);
+        border-radius: 64px 64px 0 0;
+        margin-top: 1rem;
+      }
+      .sankalp-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+      .sankalp-item {
+        background: white;
+        padding: 1.8rem;
+        border-radius: 28px;
+        border-left: 8px solid #ff6600;
+        transition: all 0.25s;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03);
+      }
+      .sankalp-item:hover {
+        transform: translateX(6px);
+        background: #fffefa;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+      }
+      .sankalp-item h4 {
+        font-size: 1.7rem;
+        color: #7a0000;
+        margin-bottom: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .sankalp-item h4 i {
+        color: #ff6600;
+        font-size: 1.6rem;
+      }
+
+      /* president section */
+      .president {
+        background: linear-gradient(125deg, #701e1e, #cc5500);
+        color: white;
+        border-radius: 58px;
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 3rem;
+        align-items: center;
+        box-shadow: 0 28px 35px -12px rgba(0, 0, 0, 0.3);
+      }
+      .president img {
+        width: 100%;
+        border-radius: 36px;
+        border: 5px solid #ffd966;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        transition: 0.3s;
+      }
+      .president h2 {
+        font-size: 2.5rem;
+        letter-spacing: -0.5px;
+      }
+      .president p {
+        line-height: 1.8;
+        font-size: 1.05rem;
+      }
+      @media (max-width: 800px) {
+        .president {
+          grid-template-columns: 1fr;
+          text-align: center;
+          padding: 2rem;
+        }
+        .president img {
+          max-width: 260px;
+          margin: 0 auto;
+        }
+      }
+
+      /* contact section */
+      .contact {
+        background: #0f1722;
+        color: #f3f4f6;
+        border-radius: 48px 48px 0 0;
+      }
+      .contact .section-title h2 {
+        color: #ffcc88;
+      }
+      .contact .section-title p {
+        color: #cbd5e6;
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        gap: 2.5rem;
+      }
+      .contact-box {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(4px);
+        padding: 2rem;
+        border-radius: 32px;
+        transition: 0.25s;
+        border: 1px solid rgba(255, 200, 100, 0.2);
+      }
+      .contact-box h3 {
+        color: #ffc857;
+        font-size: 1.8rem;
+        margin-bottom: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .contact-box p {
+        line-height: 1.8;
+        font-size: 1rem;
+      }
+
+      footer {
+        background: #03060c;
+        text-align: center;
+        padding: 2rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+      }
+
+      @media (max-width: 520px) {
+        .hero-btns .btn {
+          padding: 10px 18px;
+          font-size: 0.85rem;
+        }
+        .card {
+          padding: 1.5rem;
+        }
+        .president h2 {
+          font-size: 1.8rem;
+        }
+        .btn i {
+          font-size: 1rem;
+        }
+      }
+
+      img {
+        background: #e9dfd0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <i class="fas fa-om"></i> सनातन <span>समर्थक</span> पार्टी
+        </div>
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav id="navMenu">
+          <ul>
+            <!-- EXACT original links: Home, about.html, sankalp.html, president.html, contact.html -->
+            <li>
+              <a href="#"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+            </li>
+            <li>
+              <a href="sankalp.html"
+                ><i class="fas fa-scroll"></i> 108 संकल्प</a
+              >
+            </li>
+            <li>
+              <a href="president.html"
+                ><i class="fas fa-user-tie"></i> राष्ट्रीय अध्यक्ष</a
+              >
+            </li>
+            <li>
+              <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>सनातन समर्थक पार्टी</h1>
+        <h2>धर्म • संस्कृति • राष्ट्र • स्वाभिमान</h2>
+        <p>
+          भारत की सनातन संस्कृति, राष्ट्रीय एकता, ग्राम विकास, युवा शक्ति, गौ
+          संरक्षण और आत्मनिर्भर भारत के निर्माण हेतु समर्पित।
+        </p>
+        <div class="hero-btns">
+          <a href="sankalp.html" class="btn"
+            ><i class="fas fa-list-ul"></i> 108 संकल्प</a
+          >
+          <a href="contact.html" class="btn"
+            ><i class="fas fa-phone-alt"></i> संपर्क करें</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT Section -->
+    <section class="section" id="about">
+      <div class="section-title">
+        <h2>पार्टी परिचय</h2>
+        <p>
+          राष्ट्र निर्माण के लिए समर्पित एक सांस्कृतिक एवं राष्ट्रवादी संगठन
+        </p>
+      </div>
+      <div class="about">
+        <img src="images/party-banner.jpeg" alt="सनातन समर्थक पार्टी बैनर" />
+        <div class="about-content">
+          <h3>सनातन से राष्ट्र निर्माण</h3>
+          <p>
+            सनातन समर्थक पार्टी भारतीय संस्कृति, आध्यात्मिकता, राष्ट्रवाद और
+            सामाजिक न्याय के मूल सिद्धांतों पर आधारित संगठन है।
+          </p>
+          <p>
+            हमारा उद्देश्य भारत को विश्वगुरु बनाना, युवाओं को सशक्त करना, गांवों
+            का विकास करना तथा भारतीय सभ्यता एवं परंपराओं की रक्षा करना है।
+          </p>
+          <p>
+            पार्टी राष्ट्रहित, सुरक्षा, संस्कृति, शिक्षा, रोजगार, कृषि और
+            सामाजिक विकास को सर्वोच्च प्राथमिकता देती है।
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES CARDS Section (हमारी प्राथमिकताएं) -->
+    <section class="section">
+      <div class="section-title">
+        <h2>हमारी प्राथमिकताएं</h2>
+        <p>108 संकल्पों में शामिल मुख्य विषय</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <i class="fas fa-cow"></i>
+          <h3>गौ संरक्षण</h3>
+          <p>
+            गोमाता संरक्षण, गौशाला निर्माण और भारतीय कृषि संस्कृति को बढ़ावा।
+          </p>
+        </div>
+        <div class="card">
+          <i class="fas fa-dumbbell"></i>
+          <h3>युवा शक्ति</h3>
+          <p>रोजगार, कौशल विकास, सैन्य प्रशिक्षण एवं नेतृत्व निर्माण।</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-tree"></i>
+          <h3>ग्राम विकास</h3>
+          <p>
+            डिजिटल गांव, स्वास्थ्य केंद्र, स्वच्छता एवं आत्मनिर्भर पंचायतें।
+          </p>
+        </div>
+        <div class="card">
+          <i class="fas fa-landmark"></i>
+          <h3>संस्कृति संरक्षण</h3>
+          <p>भारतीय संस्कृति, संस्कृत भाषा और धार्मिक परंपराओं का संरक्षण।</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>राष्ट्रीय सुरक्षा</h3>
+          <p>
+            सीमा सुरक्षा मजबूत करना, आतंकवाद के विरुद्ध कठोर नीति एवं सेना का
+            आधुनिकीकरण।
+          </p>
+        </div>
+        <div class="card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>शिक्षा एवं आयुर्वेद</h3>
+          <p>
+            निःशुल्क शिक्षा, गुरुकुल व्यवस्था, आयुर्वेद विश्वविद्यालय एवं भारतीय
+            ज्ञान परंपरा को बढ़ावा।
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 108 संकल्प SECTION -->
+    <section class="section sankalp" id="sankalp">
+      <div class="section-title">
+        <h2>108 संकल्प</h2>
+        <p>राष्ट्र एवं समाज के लिए हमारी प्रतिबद्धताएं</p>
+      </div>
+      <div class="sankalp-grid">
+        <div class="sankalp-item">
+          <h4><i class="fas fa-temple"></i> हिन्दू राष्ट्र</h4>
+          <p>हिन्दू राष्ट्र की घोषणा एवं सनातन बोर्ड का गठन।</p>
+        </div>
+        <div class="sankalp-item">
+          <h4><i class="fas fa-gavel"></i> समान नागरिक संहिता</h4>
+          <p>देशभर में समान नागरिक संहिता लागू करना।</p>
+        </div>
+        <div class="sankalp-item">
+          <h4><i class="fas fa-charging-station"></i> ग्राम विकास</h4>
+          <p>
+            गांव स्तर पर आधुनिक विद्यालय, स्वास्थ्य केंद्र एवं डिजिटल लाइब्रेरी।
+          </p>
+        </div>
+        <div class="sankalp-item">
+          <h4><i class="fas fa-hand-holding-heart"></i> किसान कल्याण</h4>
+          <p>MSP की कानूनी गारंटी एवं कम ब्याज कृषि ऋण।</p>
+        </div>
+        <div class="sankalp-item">
+          <h4><i class="fas fa-female"></i> महिला सुरक्षा</h4>
+          <p>महिलाओं एवं बालिकाओं की सुरक्षा हेतु कठोर कानून।</p>
+        </div>
+        <div class="sankalp-item">
+          <h4><i class="fas fa-yin-yang"></i> भारतीय संस्कृति</h4>
+          <p>योग, ध्यान, संस्कृत एवं भारतीय परिधान को प्रोत्साहन।</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESIDENT SECTION -->
+    <section class="section" id="president">
+      <div class="president">
+        <img src="images/vijay-pratap-arya.jpeg" alt="डॉ. विजय प्रताप आर्य" />
+        <div>
+          <h2>डॉ. विजय प्रताप आर्य</h2>
+          <h3><i class="fas fa-microphone-alt"></i> राष्ट्रीय अध्यक्ष</h3>
+          <br />
+          <p>
+            “हमारा लक्ष्य केवल राजनीति नहीं, बल्कि भारत की सनातन संस्कृति,
+            राष्ट्रीय गौरव और सामाजिक एकता का पुनर्जागरण है।”
+          </p>
+          <br />
+          <p>
+            सनातन समर्थक पार्टी भारत को विश्वगुरु बनाने, युवाओं को सशक्त करने,
+            गांवों को आत्मनिर्भर बनाने और भारतीय मूल्यों को पुनः स्थापित करने
+            हेतु कार्यरत है।
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact" id="contact">
+      <div class="section-title">
+        <h2 style="color: #ffefcf">संपर्क करें</h2>
+        <p style="color: #ddd">राष्ट्रीय कार्यालय एवं संपर्क जानकारी</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3><i class="fas fa-map-marker-alt"></i> राष्ट्रीय कार्यालय</h3>
+          <p>
+            अयोध्यापुरम कॉलोनी, आराध्य होम स्टे,<br />
+            दशरथ कुंड वॉर्ड,<br />
+            पंचकोसी परिक्रमा मार्ग,<br />
+            निकट चूड़ामणि चौराहा,<br />
+            अयोध्या धाम, अयोध्या<br />
+            पिन कोड - 224001
+          </p>
+        </div>
+        <div class="contact-box">
+          <h3><i class="fas fa-address-card"></i> संपर्क</h3>
+          <p>
+            📞 7651811485<br />
+            📞 9918112402<br /><br />
+            ✉ info@sanatansamarthakparty.in
+          </p>
+        </div>
+        <div class="contact-box">
+          <h3><i class="fas fa-quote-left"></i> हमारा संदेश</h3>
+          <p>
+            “धर्म की रक्षा, संस्कृति का उत्थान, राष्ट्र का सम्मान और जनता का
+            कल्याण” हम एक ऐसे भारत का निर्माण करना चाहते हैं जहाँ युवाओं को
+            रोजगार, महिलाओं को सुरक्षा, किसानों को सम्मान, गरीबों को न्याय, और
+            प्रत्येक नागरिक को गरिमा के साथ जीवन जीने का अवसर प्राप्त हो।
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <i class="fas fa-flag-checkered"></i> © 2026 सनातन समर्थक पार्टी | All
+      Rights Reserved
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("navMenu");
+      // Toggle mobile menu
+      hamburger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        navMenu.classList.toggle("active");
+      });
+
+      // Close menu when clicking on a link (for better UX)
+      const navLinks = document.querySelectorAll("#navMenu ul li a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 768) {
+            navMenu.classList.remove("active");
+          }
+        });
+      });
+
+      // smooth scroll only for internal section links (Home, About, Sankalp, President, Contact sections)
+      // but PRESERVE original external page links (about.html, sankalp.html, president.html, contact.html)
+      // we only add smooth scroll for #home, #about, #sankalp, #president, #contact if they exist.
+      // Hero buttons use sankalp.html and contact.html directly – no change.
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        const hrefAttr = anchor.getAttribute("href");
+        if (hrefAttr === "#" || hrefAttr === "") return;
+        const targetId = hrefAttr.substring(1);
+        const targetElem = document.getElementById(targetId);
+        if (targetElem) {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const offset = 80;
+            const elementPosition = targetElem.getBoundingClientRect().top;
+            const offsetPosition =
+              elementPosition + window.pageYOffset - offset;
+            window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+            if (window.innerWidth <= 768) navMenu.classList.remove("active");
+          });
+        }
+      });
+    </script>
+  </body>
 </html>
-```

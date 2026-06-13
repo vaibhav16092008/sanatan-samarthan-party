@@ -1,765 +1,596 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hi">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>
-108 संकल्प | सनातन समर्थक पार्टी
-</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-/* =========================
-   GLOBAL
-========================= */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-
-font-family:'Noto Sans Devanagari', sans-serif;
-
-background:#fff7ef;
-
-overflow-x:hidden;
-
-color:#222;
-
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-header{
-
-width:100%;
-
-position:sticky;
-
-top:0;
-
-z-index:1000;
-
-background:
-linear-gradient(to right,#7a0000,#ff6600);
-
-box-shadow:
-0 5px 20px rgba(0,0,0,0.25);
-
-}
-
-.navbar{
-
-width:90%;
-
-margin:auto;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:18px 0;
-
-}
-
-.logo{
-
-font-size:34px;
-
-font-weight:800;
-
-color:white;
-
-}
-
-.logo span{
-
-color:#ffd700;
-
-}
-
-nav ul{
-
-display:flex;
-
-list-style:none;
-
-gap:30px;
-
-}
-
-nav ul li a{
-
-text-decoration:none;
-
-color:white;
-
-font-size:18px;
-
-font-weight:600;
-
-transition:0.3s;
-
-}
-
-nav ul li a:hover{
-
-color:#ffd700;
-
-}
-
-/* =========================
-   HERO SECTION
-========================= */
-
-.hero-section{
-
-padding:50px 20px;
-
-background:
-linear-gradient(to bottom,#fff5dc,#fff0cf);
-
-text-align:center;
-
-}
-
-/* =========================
-   MAIN BANNER
-========================= */
-
-.banner-container{
-
-max-width:1450px;
-
-margin:auto;
-
-}
-
-.banner-image{
-
-width:100%;
-
-display:block;
-
-margin:auto;
-
-border-radius:30px;
-
-border:6px solid #ffd700;
-
-box-shadow:
-0 15px 50px rgba(0,0,0,0.35);
-
-}
-
-/* =========================
-   FEATURE SECTION
-========================= */
-
-.features-section{
-
-padding:70px 10%;
-
-}
-
-.section-title{
-
-text-align:center;
-
-margin-bottom:50px;
-
-}
-
-.section-title h2{
-
-font-size:52px;
-
-color:#7a0000;
-
-margin-bottom:15px;
-
-}
-
-.section-title p{
-
-font-size:22px;
-
-color:#555;
-
-}
-
-.features-grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(260px,1fr));
-
-gap:30px;
-
-}
-
-.feature-card{
-
-background:white;
-
-padding:35px 25px;
-
-border-radius:25px;
-
-transition:0.4s;
-
-border-top:6px solid #ff6600;
-
-box-shadow:
-0 10px 25px rgba(0,0,0,0.08);
-
-}
-
-.feature-card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:
-0 15px 35px rgba(0,0,0,0.15);
-
-}
-
-.feature-card h3{
-
-font-size:30px;
-
-margin-bottom:18px;
-
-color:#7a0000;
-
-}
-
-.feature-card p{
-
-font-size:18px;
-
-line-height:1.8;
-
-color:#444;
-
-}
-
-/* =========================
-   MANIFESTO SECTION
-========================= */
-
-.manifesto-section{
-
-padding:80px 10%;
-
-background:#fffdf9;
-
-}
-
-.language-buttons{
-
-text-align:center;
-
-margin-bottom:50px;
-
-}
-
-.language-buttons button{
-
-padding:16px 35px;
-
-margin:10px;
-
-border:none;
-
-border-radius:50px;
-
-background:#ff6600;
-
-color:white;
-
-font-size:18px;
-
-font-weight:700;
-
-cursor:pointer;
-
-transition:0.3s;
-
-box-shadow:
-0 5px 15px rgba(0,0,0,0.2);
-
-}
-
-.language-buttons button:hover{
-
-background:#7a0000;
-
-transform:translateY(-3px);
-
-}
-
-.manifesto-image-box{
-
-width:100%;
-
-text-align:center;
-
-}
-
-.manifesto-image{
-
-width:100%;
-
-max-width:1250px;
-
-border-radius:25px;
-
-border:5px solid #ffd700;
-
-box-shadow:
-0 15px 40px rgba(0,0,0,0.25);
-
-transition:0.4s;
-
-}
-
-.manifesto-image:hover{
-
-transform:scale(1.01);
-
-}
-
-/* =========================
-   SLOGAN
-========================= */
-
-.slogan-box{
-
-text-align:center;
-
-padding:40px 20px;
-
-}
-
-.slogan{
-
-display:inline-block;
-
-padding:20px 40px;
-
-font-size:42px;
-
-font-weight:700;
-
-color:#ffd700;
-
-background:
-linear-gradient(to right,#7a0000,#b30000);
-
-border-radius:20px;
-
-border:4px solid #ffd700;
-
-box-shadow:
-0 10px 30px rgba(0,0,0,0.25);
-
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-
-background:#111;
-
-color:white;
-
-text-align:center;
-
-padding:25px;
-
-font-size:18px;
-
-margin-top:40px;
-
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:900px){
-
-.logo{
-
-font-size:24px;
-
-}
-
-nav ul{
-
-display:none;
-
-}
-
-.section-title h2{
-
-font-size:36px;
-
-}
-
-.section-title p{
-
-font-size:18px;
-
-}
-
-.feature-card h3{
-
-font-size:24px;
-
-}
-
-.feature-card p{
-
-font-size:16px;
-
-}
-
-.slogan{
-
-font-size:24px;
-
-padding:15px 25px;
-
-}
-
-.language-buttons button{
-
-width:90%;
-
-}
-
-.banner-image{
-
-border-radius:18px;
-
-}
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<!-- =========================
-     HEADER
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>108 संकल्प | सनातन समर्थक पार्टी | घोषणापत्र</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <style>
+      /* =========================
+       GLOBAL RESET
+    ========================= */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Noto Sans Devanagari", sans-serif;
+        background: #fffaf2;
+        color: #1e1e2a;
+        overflow-x: hidden;
+        line-height: 1.5;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1e6d9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ff6600;
+        border-radius: 10px;
+      }
+
+      /* =========================
+       HEADER (FIXED + HAMBURGER)
+    ========================= */
+      header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background: linear-gradient(135deg, #7a1a1a 0%, #c13b00 100%);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .navbar {
+        width: 90%;
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 0;
+      }
+
+      .logo {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        font-weight: 800;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .logo span {
+        color: #ffd700;
+        text-shadow: 0 0 2px #b37b00;
+      }
+      .logo i {
+        font-size: 1.6rem;
+        color: #ffd966;
+      }
+
+      /* desktop nav */
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: 0.3s;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 0;
+      }
+      nav ul li a i {
+        font-size: 0.9rem;
+      }
+      nav ul li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0;
+        height: 3px;
+        background: #ffd700;
+        transition: 0.25s;
+        border-radius: 2px;
+      }
+      nav ul li a:hover::after {
+        width: 100%;
+      }
+      nav ul li a:hover {
+        color: #ffdd99;
+      }
+
+      .hamburger {
+        display: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: white;
+        transition: 0.2s;
+      }
+      .hamburger:hover {
+        color: #ffd966;
+      }
+
+      @media (max-width: 850px) {
+        .hamburger {
+          display: block;
+        }
+        nav {
+          position: absolute;
+          top: 68px;
+          left: 0;
+          width: 100%;
+          background: linear-gradient(135deg, #8b2a2a, #c14f10);
+          backdrop-filter: blur(12px);
+          z-index: 999;
+          transform: scaleY(0);
+          transform-origin: top;
+          transition: transform 0.3s ease;
+          border-radius: 0 0 28px 28px;
+          box-shadow: 0 20px 25px -10px rgba(0, 0, 0, 0.3);
+        }
+        nav.active {
+          transform: scaleY(1);
+        }
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+          padding: 1.5rem 0;
+          gap: 1.2rem;
+        }
+        nav ul li a {
+          font-size: 1.15rem;
+        }
+      }
+
+      /* =========================
+       HERO SECTION (BANNER)
+    ========================= */
+      .hero-section {
+        padding: 2rem 1.5rem;
+        background: linear-gradient(135deg, #fff5e0, #ffefdb);
+        text-align: center;
+      }
+      .banner-container {
+        max-width: 1450px;
+        margin: 0 auto;
+      }
+      .banner-image {
+        width: 100%;
+        display: block;
+        margin: auto;
+        border-radius: 28px;
+        border: 5px solid #ffd966;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        transition: transform 0.3s;
+      }
+      .banner-image:hover {
+        transform: scale(1.01);
+      }
+
+      /* =========================
+       FEATURES SECTION (प्राथमिकताएं)
+    ========================= */
+      .features-section {
+        padding: 5rem 6%;
+      }
+      .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      .section-title h2 {
+        font-size: clamp(2rem, 6vw, 3.2rem);
+        color: #7a0000;
+        margin-bottom: 0.8rem;
+        position: relative;
+        display: inline-block;
+      }
+      .section-title h2:after {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 4px;
+        background: #ff6600;
+        border-radius: 4px;
+      }
+      .section-title p {
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 1.2rem auto 0;
+        color: #5a5a66;
+        line-height: 1.7;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+      .feature-card {
+        background: white;
+        padding: 2rem 1.8rem;
+        border-radius: 28px;
+        transition: all 0.35s;
+        border-top: 6px solid #ff6600;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+        text-align: center;
+      }
+      .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 35px -8px rgba(255, 102, 0, 0.2);
+      }
+      .feature-card i {
+        font-size: 2.8rem;
+        color: #ff6600;
+        background: #fff0e0;
+        padding: 12px;
+        border-radius: 50px;
+        margin-bottom: 1rem;
+      }
+      .feature-card h3 {
+        font-size: 1.7rem;
+        margin-bottom: 0.8rem;
+        color: #7a0000;
+      }
+      .feature-card p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #444;
+      }
+
+      /* =========================
+       MANIFESTO SECTION (108 संकल्प IMAGES)
+    ========================= */
+      .manifesto-section {
+        padding: 5rem 6%;
+        background: #fffdf7;
+      }
+      .language-buttons {
+        text-align: center;
+        margin-bottom: 2.5rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .lang-btn {
+        padding: 14px 32px;
+        border: none;
+        border-radius: 60px;
+        background: #ff6600;
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .lang-btn i {
+        font-size: 1.2rem;
+      }
+      .lang-btn:hover {
+        background: #7a0000;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .manifesto-image-box {
+        width: 100%;
+        text-align: center;
+        background: #fffaf0;
+        padding: 1rem;
+        border-radius: 32px;
+      }
+      .manifesto-image {
+        width: 100%;
+        max-width: 1250px;
+        border-radius: 28px;
+        border: 4px solid #ffd966;
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+      }
+      .manifesto-image:hover {
+        transform: scale(1.01);
+        box-shadow: 0 25px 40px rgba(0, 0, 0, 0.25);
+      }
+
+      /* =========================
+       SLOGAN SECTION
+    ========================= */
+      .slogan-box {
+        text-align: center;
+        padding: 2rem 1.5rem;
+        margin: 1rem 0 2rem;
+      }
+      .slogan {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 1rem 2rem;
+        font-size: clamp(1.2rem, 5vw, 2.2rem);
+        font-weight: 800;
+        color: #ffd700;
+        background: linear-gradient(135deg, #7a1a1a, #b34410);
+        border-radius: 60px;
+        border: 3px solid #ffdd88;
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        letter-spacing: 1px;
+      }
+      .slogan i {
+        font-size: 1.8rem;
+        color: #ffdd88;
+      }
+
+      /* =========================
+       FOOTER
+    ========================= */
+      footer {
+        background: #0f0f12;
+        text-align: center;
+        padding: 2rem;
+        color: #f0ede8;
+        margin-top: 2rem;
+        border-top: 1px solid #ffaa4440;
+      }
+      footer p {
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      /* responsive touches */
+      @media (max-width: 600px) {
+        .features-section,
+        .manifesto-section {
+          padding: 3rem 5%;
+        }
+        .feature-card {
+          padding: 1.5rem;
+        }
+        .lang-btn {
+          padding: 10px 20px;
+          font-size: 0.9rem;
+        }
+        .slogan {
+          padding: 0.8rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================
+     HEADER (with hamburger & original links)
 ========================= -->
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <i class="fas fa-om"></i> सनातन <span>समर्थक</span> पार्टी
+        </div>
+        <div class="hamburger" id="hamburgerBtn">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav id="mainNav">
+          <ul>
+            <!-- Exact original links preserved -->
+            <li>
+              <a href="index.html"><i class="fas fa-home"></i> मुख्य पृष्ठ</a>
+            </li>
+            <li>
+              <a href="sankalp.html"
+                ><i class="fas fa-scroll"></i> 108 संकल्प</a
+              >
+            </li>
+            <li>
+              <a href="president.html"
+                ><i class="fas fa-user-tie"></i> राष्ट्रीय अध्यक्ष</a
+              >
+            </li>
+            <li>
+              <a href="contact.html"><i class="fas fa-envelope"></i> संपर्क</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-<header>
-
-<div class="navbar">
-
-<div class="logo">
-
-सनातन <span>समर्थक</span> पार्टी
-
-</div>
-
-<nav>
-
-<ul>
-
-<li>
-<a href="index.html">
-मुख्य पृष्ठ
-</a>
-</li>
-
-<li>
-<a href="sankalp.html">
-108 संकल्प
-</a>
-</li>
-
-<li>
-<a href="president.html">
-राष्ट्रीय अध्यक्ष
-</a>
-</li>
-
-<li>
-<a href="contact.html">
-संपर्क
-</a>
-</li>
-
-</ul>
-
-</nav>
-
-</div>
-
-</header>
-
-<!-- =========================
-     HERO SECTION
+    <!-- =========================
+     HERO BANNER SECTION
 ========================= -->
+    <section class="hero-section">
+      <div class="banner-container">
+        <img
+          src="images/banner-poster.png"
+          alt="108 Sankalp Banner - सनातन समर्थक पार्टी"
+          class="banner-image"
+        />
+      </div>
+    </section>
 
-<section class="hero-section">
-
-<div class="banner-container">
-
-<img
-src="images/banner-poster.png"
-alt="108 Sankalp Banner"
-class="banner-image"
->
-
-</div>
-
-</section>
-
-<!-- =========================
-     FEATURES SECTION
+    <!-- =========================
+     FEATURES SECTION (हमारी प्राथमिकताएं)
 ========================= -->
+    <section class="features-section">
+      <div class="section-title">
+        <h2>हमारी प्राथमिकताएं</h2>
+        <p>108 संकल्पों में शामिल मुख्य विषय</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-landmark"></i>
+          <h3>संस्कृति संरक्षण</h3>
+          <p>सनातन संस्कृति एवं भारतीय परंपराओं की रक्षा।</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>राष्ट्रीय सुरक्षा</h3>
+          <p>मजबूत भारत, सुरक्षित सीमाएं एवं आतंकवाद मुक्त राष्ट्र।</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>शिक्षा उत्थान</h3>
+          <p>भारतीय ज्ञान परंपरा आधारित आधुनिक शिक्षा व्यवस्था।</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-tree"></i>
+          <h3>ग्राम विकास</h3>
+          <p>आत्मनिर्भर गांव, डिजिटल सुविधाएं एवं ग्रामीण विकास।</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-cow"></i>
+          <h3>गौ संरक्षण</h3>
+          <p>गोमाता संरक्षण एवं कृषि संस्कृति को बढ़ावा।</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-hand-holding-heart"></i>
+          <h3>सामाजिक न्याय</h3>
+          <p>सभी वर्गों के सम्मान एवं विकास हेतु प्रतिबद्धता।</p>
+        </div>
+      </div>
+    </section>
 
-<section class="features-section">
-
-<div class="section-title">
-
-<h2>
-हमारी प्राथमिकताएं
-</h2>
-
-<p>
-108 संकल्पों में शामिल मुख्य विषय
-</p>
-
-</div>
-
-<div class="features-grid">
-
-<div class="feature-card">
-
-<h3>
-संस्कृति संरक्षण
-</h3>
-
-<p>
-सनातन संस्कृति एवं भारतीय परंपराओं की रक्षा।
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<h3>
-राष्ट्रीय सुरक्षा
-</h3>
-
-<p>
-मजबूत भारत, सुरक्षित सीमाएं एवं आतंकवाद मुक्त राष्ट्र।
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<h3>
-शिक्षा उत्थान
-</h3>
-
-<p>
-भारतीय ज्ञान परंपरा आधारित आधुनिक शिक्षा व्यवस्था।
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<h3>
-ग्राम विकास
-</h3>
-
-<p>
-आत्मनिर्भर गांव, डिजिटल सुविधाएं एवं ग्रामीण विकास।
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<h3>
-गौ संरक्षण
-</h3>
-
-<p>
-गोमाता संरक्षण एवं कृषि संस्कृति को बढ़ावा।
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<h3>
-सामाजिक न्याय
-</h3>
-
-<p>
-सभी वर्गों के सम्मान एवं विकास हेतु प्रतिबद्धता।
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     MANIFESTO SECTION
+    <!-- =========================
+     MANIFESTO SECTION (108 संकल्प - HINDI/ENGLISH)
 ========================= -->
+    <section class="manifesto-section">
+      <div class="section-title">
+        <h2>हमारे 108 संकल्प</h2>
+        <p>हिन्दी एवं English भाषा में पार्टी घोषणापत्र</p>
+      </div>
 
-<section class="manifesto-section">
+      <!-- LANGUAGE BUTTONS -->
+      <div class="language-buttons">
+        <button class="lang-btn" onclick="showHindi()">
+          <i class="fas fa-language"></i> हिन्दी संकल्प
+        </button>
+        <button class="lang-btn" onclick="showEnglish()">
+          <i class="fas fa-globe"></i> English Resolutions
+        </button>
+      </div>
 
-<div class="section-title">
+      <!-- HINDI IMAGE SECTION -->
+      <div id="hindi-section">
+        <div class="manifesto-image-box">
+          <img
+            src="images/108-sankalp-hindi.png"
+            alt="108 संकल्प हिन्दी - सनातन समर्थक पार्टी"
+            class="manifesto-image"
+          />
+        </div>
+      </div>
 
-<h2>
-हमारे 108 संकल्प
-</h2>
+      <!-- ENGLISH IMAGE SECTION (hidden by default) -->
+      <div id="english-section" style="display: none">
+        <div class="manifesto-image-box">
+          <img
+            src="images/108-sankalp-english.png"
+            alt="108 Resolutions English - Sanatan Samarthak Party"
+            class="manifesto-image"
+          />
+        </div>
+      </div>
+    </section>
 
-<p>
-Hindi एवं English भाषा में पार्टी घोषणापत्र
-</p>
-
-</div>
-
-<!-- BUTTONS -->
-
-<div class="language-buttons">
-
-<button onclick="showHindi()">
-
-हिन्दी संकल्प
-
-</button>
-
-<button onclick="showEnglish()">
-
-English Resolutions
-
-</button>
-
-</div>
-
-<!-- HINDI IMAGE -->
-
-<div id="hindi-section">
-
-<div class="manifesto-image-box">
-
-<img
-src="images/108-sankalp-hindi.png"
-alt="Hindi Sankalp"
-class="manifesto-image"
->
-
-</div>
-
-</div>
-
-<!-- ENGLISH IMAGE -->
-
-<div id="english-section" style="display:none;">
-
-<div class="manifesto-image-box">
-
-<img
-src="images/108-sankalp-english.png"
-alt="English Sankalp"
-class="manifesto-image"
->
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     SLOGAN
+    <!-- =========================
+     SLOGAN SECTION
 ========================= -->
+    <div class="slogan-box">
+      <div class="slogan">
+        <i class="fas fa-flag-checkered"></i> एक भारत • श्रेष्ठ भारत •
+        स्वाभिमानी भारत
+      </div>
+    </div>
 
-<div class="slogan-box">
-
-<div class="slogan">
-
-एक भारत • श्रेष्ठ भारत • स्वाभिमानी भारत
-
-</div>
-
-</div>
-
-<!-- =========================
+    <!-- =========================
      FOOTER
 ========================= -->
+    <footer>
+      <p>
+        <i class="fas fa-copyright"></i> 2026 सनातन समर्थक पार्टी | All Rights
+        Reserved
+      </p>
+    </footer>
 
-<footer>
-
-© 2026 सनातन समर्थक पार्टी |
-All Rights Reserved
-
-</footer>
-
-<!-- =========================
-     JAVASCRIPT
+    <!-- =========================
+     JAVASCRIPT (fixed toggle + hamburger)
 ========================= -->
+    <script>
+      // LANGUAGE TOGGLE FUNCTIONS (fixed error in original showEnglish)
+      function showHindi() {
+        document.getElementById("hindi-section").style.display = "block";
+        document.getElementById("english-section").style.display = "none";
+      }
 
-<script>
+      function showEnglish() {
+        document.getElementById("hindi-section").style.display = "none";
+        document.getElementById("english-section").style.display = "block";
+      }
 
-function showHindi(){
+      // HAMBURGER MENU TOGGLE
+      const hamburger = document.getElementById("hamburgerBtn");
+      const navMenu = document.getElementById("mainNav");
 
-document.getElementById('hindi-section').style.display='block';
+      if (hamburger && navMenu) {
+        hamburger.addEventListener("click", (e) => {
+          e.stopPropagation();
+          navMenu.classList.toggle("active");
+        });
 
-document.getElementById('english-section').style.display='none';
+        // close mobile menu on link click
+        const navLinks = document.querySelectorAll("#mainNav ul li a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (window.innerWidth <= 850) {
+              navMenu.classList.remove("active");
+            }
+          });
+        });
 
-}
-
-function showEnglish(){
-
-document.getElementById('hindi-section').style.display='none';
-
-document.getElementById('hindi-section').style.display='none';
-
-document.getElementById('english-section').style.display='block';
-
-}
-
-</script>
-
-</body>
-
+        // close menu when clicking outside
+        document.addEventListener("click", (event) => {
+          if (window.innerWidth <= 850) {
+            if (
+              !navMenu.contains(event.target) &&
+              !hamburger.contains(event.target)
+            ) {
+              navMenu.classList.remove("active");
+            }
+          }
+        });
+      }
+    </script>
+  </body>
 </html>
-```
